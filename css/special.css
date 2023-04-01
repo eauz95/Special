@@ -1,0 +1,595 @@
+:root {
+    --main-colo: #ff5722
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* Start Setting Box */
+.setting-box {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: #fff;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.setting-box.open {
+    left: 0;
+}
+
+.setting-box .gear-box {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.setting-box .gear-box .fa-gear {
+    width: 30px;
+    padding: 8px 0;
+    /* i give there padding and width to be clickable everywhere*/
+}
+
+.setting-box .option-box {
+    padding: 10px;
+    text-align: center;
+    background-color: #EEE;
+    margin: 10px;
+}
+
+.setting-box .option-box h4 {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.setting-box .option-box .colors-list {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.setting-box .option-box .colors-list li {
+    width: 24px;
+    height: 24px;
+    background-color: #2196f3;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: solid 3px #EEE;
+
+}
+
+.setting-box .option-box .colors-list .active {
+    border-color: #fff;
+}
+
+.setting-box .option-box .colors-list li:first-child {
+    background-color: #ff5722
+}
+
+.setting-box .option-box .colors-list li:nth-child(2) {
+    background-color: #009688;
+}
+
+.setting-box .option-box .colors-list li:nth-child(3) {
+    background-color: #E91E63;
+}
+
+.setting-box .option-box .colors-list li:nth-child(4) {
+    background-color: #9c27b0;
+}
+
+.setting-box .option-box .colors-list li:nth-child(5) {
+    background-color: #4CAF50;
+}
+
+.setting-box .random-background .yes,
+.setting-box .random-background .no {
+    width: 50px;
+    background-color: #009688;
+    color: #fff;
+    cursor: pointer;
+    padding: 3px 10px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+}
+
+.setting-box .random-background span.active {
+    opacity: 1;
+    background-color: #009688;
+}
+
+/* End Setting Box */
+
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-image: url(../img/03.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgb(0 0 0 / 50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.headr-area {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+
+.headr-area .logo {
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.headr-area .links {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 30px;
+    font-size: 15px;
+}
+
+.headr-area .links a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3;
+}
+
+.headr-area .links a:hover,
+.headr-area .links a.active {
+    color: var(--main-colo);
+}
+
+.headr-area .links li {
+    display: inline-block;
+    margin-left: 20px;
+
+}
+
+.introduction-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.introduction-text h1 {
+    margin: 0 0 20px;
+    font-size: 35px;
+}
+
+.introduction-text h1 span {
+    color: var(--main-colo)
+}
+
+.introduction-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* End Landing */
+/* Start About Us */
+.about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.about-us .info-box {
+    flex: 1;
+    padding: 30px;
+}
+
+.about-us .info-box h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-colo);
+    margin: 0 0 10px;
+}
+
+.about-us .info-box p {
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+
+.about-us .image-box {
+    flex: 1;
+    text-align: center;
+
+}
+
+.about-us .image-box img {
+    width: 250px;
+}
+
+/* End About Us */
+/* Start Our Skill */
+.skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ebe6e6;
+}
+
+.skills h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-colo);
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.skills .skill-box {
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.skills .skill-box .skill-name {
+    font-weight: bold;
+    width: 140px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.skills .skill-box .skill-progress {
+    width: 100%;
+    background-color: #f6f6f6;
+    height: 30px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .skill-box .skill-progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-colo);
+    transition: all .5s;
+}
+
+/* End Our Skill */
+
+/* Start Our Gallery */
+.gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.gallery h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-colo);
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.gallery .images-box {
+    text-align: center;
+}
+
+.gallery .images-box img {
+    width: 200px;
+    height: 180px;
+    padding: 3px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.popup-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .7);
+    z-index: 1000;
+}
+
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.popup-box img {
+    max-width: 100%;
+}
+
+.popup-box h3 {
+    text-align: center;
+    color: var(--main-colo);
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--main-colo);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-family: Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* End Our Gallery */
+
+/* Start Timeline */
+.timeline {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+}
+
+.timeline .timeline-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline .timeline-content::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    background-color: var(--main-colo);
+    margin-left: -1px;
+    top: 0;
+}
+
+.timeline .timeline-content .year {
+    margin: 20px auto;
+    position: relative;
+    width: 50px;
+    z-index: 2;
+    background-color: var(--main-colo);
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+    width: calc(50% - 25px);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline .timeline-content .left {
+    float: left;
+}
+
+.timeline .timeline-content .left::before {
+    right: -35px;
+}
+
+.timeline .timeline-content .right {
+    float: right;
+}
+
+.timeline .timeline-content .right::before {
+    left: -35px;
+}
+
+.timeline .timeline-content .right::before,
+.timeline .timeline-content .left::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: solid 3px var(--main-colo);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.timeline .timeline-content .content {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.timeline .timeline-content .content h3 {
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: var(--main-colo);
+}
+
+.timeline .timeline-content .content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.timeline .timeline-content .left .content::before {
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent #fff;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+}
+
+.timeline .timeline-content .right .content::before {
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #fff transparent transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+}
+
+/* End Timeline */
+
+/* Start Our featuers */
+.featuers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.featuers h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-colo);
+    margin: 0 0 60px;
+    text-align: center;
+}
+
+.featuers .feat-box {
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featuers .feat-box img {
+    width: 100px;
+}
+
+.featuers .feat-box h4 {
+    font-size: 22px;
+    margin: 15px 0 40px;
+    position: relative;
+}
+
+.featuers .feat-box h4::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-colo);
+    width: 40px;
+    height: 4px;
+    left: 50%;
+    margin-left: -20px;
+    bottom: -22px;
+}
+
+.featuers .feat-box p {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #777;
+}
+
+/* End Our featuers */
+
+/* Start testimonials */
+.testimonials {
+    min-height: 600px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-colo);
+}
+
+.testimonials::after {
+    content: '';
+    content: '';
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #777;
+}
+
+.testimonials h2 {
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 30px;
+    font-size: 32px;
+}
+
+.testimonials .testimonials-box {
+    z-index: 2;
+    position: relative;
+    width: calc(98%/3);
+    float: left;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.testimonials .testimonials-box:not(:last-of-type) {
+    margin-right: 1%;
+}
+
+/* End testimonials */
